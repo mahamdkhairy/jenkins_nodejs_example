@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent {label 'ec2'}
 
     stages {
         stage('prep') {
             steps {
-                git 'https://github.com/IslamReda/jenkins_nodejs_example.git'
+                git 'https://github.com/mahamdkhairy/jenkins_nodejs_example.git'
             }
         }
         stage('build') {
